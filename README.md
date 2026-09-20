@@ -266,25 +266,34 @@ Output: prediction_output/result/interpretation/beeswarm_*.png, heatmap_*.png, g
 
 ### Phenotype Discovery
 
-* **Identified Phenotypes**: *2* major distinct AKI phenotypes
+* **Identified Phenotypes**: 2 major distinct AKI phenotypes
 * **Clustering Quality**:
   - Silhouette Score: 0.321
   - Davies-Bouldin Index: 1.139
   - Calinski-Harabasz Score: 10060.729
+
+<p align="center">
+  <img src="results/clustering/final_clusters_3d_visualization.png" alt="3D Cluster Visualization" width="80%">
+</p>
+
 * **Top differentiators**: 
-  - higher in cluster1: Mean Bilirubin, Minimum Lactate,Mean Temperature, Mean Lactate
-  - higher in cluster3: Mean Bicarbonate, Mean Platelet Count, Std Dev of Heart Rate, Mean White Blood Cell Count, Mean Blood Urea Nitrogen 
+  - higher in cluster 1: Mean Bilirubin, Minimum Lactate, Mean Temperature, Mean Lactate
+  - higher in cluster 3: Mean Bicarbonate, Mean Platelet Count, Std Dev of Heart Rate, Mean White Blood Cell Count, Mean Blood Urea Nitrogen 
 * **Interpretation**:
-  - Cluster 1: Shock/Multi-Organ Dysfunction
-    ↑ Bilirubin (liver dysfunction)
-    ↑ Lactate (tissue hypoperfusion/shock)
-    ↑ Temperature (systemic inflammation)
-  - Cluster 3: Inflammatory/Prerenal
-    ↑ Bicarbonate (better metabolic compensation)
-    ↑ Platelets (preserved hematologic function)
-    ↑ WBC (active infection/inflammation)
-    ↑ BUN (prerenal azotemia)
-    ↑ HR variability (hemodynamic fluctuation)
+  - **Cluster 1: Shock / Multi-Organ Dysfunction**
+    - ↑ Bilirubin (liver dysfunction)
+    - ↑ Lactate (tissue hypoperfusion/shock)
+    - ↑ Temperature (systemic inflammation)
+  - **Cluster 3: Inflammatory / Prerenal**
+    - ↑ Bicarbonate (better metabolic compensation)
+    - ↑ Platelets (preserved hematologic function)
+    - ↑ WBC (active infection/inflammation)
+    - ↑ BUN (prerenal azotemia)
+    - ↑ HR variability (hemodynamic fluctuation)
+
+<p align="center">
+  <img src="results/clustering/cluster_heatmap.png" alt="Cluster Heatmap" width="80%">
+</p>
 
 ---
 
@@ -300,6 +309,10 @@ Output: prediction_output/result/interpretation/beeswarm_*.png, heatmap_*.png, g
 | Progression | 0.896 | 0.867 | 0.737 |
 | Mortality | 0.827 | 0.671 | 0.503 |
 | Prolonged ICU | 0.791 | 0.674 | 0.504 |
+
+<p align="center">
+  <img src="results/prediction/model_comparison_plot.png" alt="Model Comparison Plot" width="85%">
+</p>
 
 ---
 
@@ -319,6 +332,11 @@ Output: prediction_output/result/interpretation/beeswarm_*.png, heatmap_*.png, g
 | Renal dysfunction | Creatinine, BUN, BUN/Cr ratio, fold-change | Severe AKI, Progression |
 | Systemic illness | Respiratory rate, lactate, temperature | Mortality, Prolonged ICU |
 | Illness acuity | ABG measured (proxy for severity) | Prolonged ICU |
+
+<p align="center">
+  <img src="results/prediction/interpretation/beeswarm_mortality.png" alt="SHAP Beeswarm Plot - Mortality" width="48%">
+  <img src="results/prediction/interpretation/beeswarm_severe_aki.png" alt="SHAP Beeswarm Plot - Severe AKI" width="48%">
+</p>
 
 ---
 
