@@ -1,0 +1,6 @@
+metric,value
+Method,GMM
+Number of Clusters,6
+Silhouette Score,0.32102299632247006
+Davies-Bouldin Index,1.1394332514378622
+Calinski-Harabasz Score,10060.729491184295
