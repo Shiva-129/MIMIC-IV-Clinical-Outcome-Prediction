@@ -1,0 +1,36 @@
+# =====================
+# MIMIC / PhysioNet data (DO NOT COMMIT)
+# =====================
+physionet.org/
+
+# Project data directories
+clustering_output/data/
+prediction_output/data/
+prediction_output/result/models/
+
+# =====================
+# Python environments
+# =====================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv
+venv/
+aki_env/
+
+# =====================
+# Outputs & logs
+# =====================
+output/
+logs/
+*.log
+
+# =====================
+# OS / editor
+# =====================
+.DS_Store
+.vscode/
+.idea/
+
