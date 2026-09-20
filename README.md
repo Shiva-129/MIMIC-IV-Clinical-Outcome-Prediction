@@ -52,6 +52,31 @@ tqdm >= 4.62.0
 joblib >= 1.1.0
 ```
 
+### Project Structure
+
+```text
+MIMIC-IV-Clinical-Outcome-Prediction/
+├── notebooks/
+│   ├── 01_clustering/
+│   │   ├── 1.1_Data_Extraction.ipynb
+│   │   ├── 1.2_Feature_Engineering.ipynb
+│   │   └── 1.3_Clustering.ipynb
+│   └── 02_prediction/
+│       ├── 2.1_Data_Extraction.ipynb
+│       ├── 2.2_Feature_Engineering.ipynb
+│       └── 2.3_Model_Training.ipynb
+├── results/
+│   ├── clustering/              # 3D embeddings, heatmaps, metrics CSVs
+│   └── prediction/              # ROC/PR curves, SHAP beeswarms, benchmark tables
+├── docs/
+│   └── model_tuning.md          # Hyperparameter tuning logs & notes
+├── requirements.txt
+├── .gitignore
+└── README.md
+```
+
+---
+
 ### Installation
 
 ```bash
@@ -64,7 +89,7 @@ python3 -m venv aki_env
 source aki_env/bin/activate  # On Windows: aki_env\Scripts\activate
 
 # Install dependencies
-pip install pandas numpy scikit-learn xgboost umap-learn shap matplotlib seaborn scipy tqdm joblib
+pip install -r requirements.txt
 ```
 
 ### Database acquirement
@@ -301,12 +326,12 @@ Output: prediction_output/result/interpretation/beeswarm_*.png, heatmap_*.png, g
 
 ➡️ Full quantitative tables, per-outcome metrics, and statistical tests are provided in:
 
-* `clustering_output/result/clustering_metrics.csv`
-* `clustering_output/result/cluster_summary.csv`
-* `clustering_output/result/output/cluster_heatmap.png`
-* `prediction_output/result/model_comparison.csv`
-* `prediction_output/result/*_roc_curves_val.png`
-* `prediction_output/result/interpretation/`
+* `results/clustering/clustering_metrics.csv`
+* `results/clustering/cluster_summary.csv`
+* `results/clustering/cluster_heatmap.png`
+* `results/prediction/model_comparison.csv`
+* `results/prediction/*_roc_curves_val.png`
+* `results/prediction/interpretation/`
 
 ---
 ## Limitations

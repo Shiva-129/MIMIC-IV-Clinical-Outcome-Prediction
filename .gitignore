@@ -2,11 +2,15 @@
 # MIMIC / PhysioNet data (DO NOT COMMIT)
 # =====================
 physionet.org/
+data/
+*.csv.gz
+*.parquet
+*.db
+*.sqlite
 
-# Project data directories
-clustering_output/data/
-prediction_output/data/
-prediction_output/result/models/
+# Intermediate Data Directories
+data/
+results/models/
 
 # =====================
 # Python environments
@@ -21,11 +25,13 @@ venv/
 aki_env/
 
 # =====================
-# Outputs & logs
+# Outputs, logs & checkpoints
 # =====================
-output/
 logs/
 *.log
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+*/*/.ipynb_checkpoints/
 
 # =====================
 # OS / editor
@@ -33,4 +39,4 @@ logs/
 .DS_Store
 .vscode/
 .idea/
-
+.Rhistory
